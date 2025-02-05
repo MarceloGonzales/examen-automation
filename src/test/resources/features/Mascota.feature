@@ -1,7 +1,7 @@
 @ProbarFeatureMascota
 Feature: Mascota
 
-  @crerMascota
+  @crearMascota
   Scenario: Crear Mascota
 
   @consultarMascota
