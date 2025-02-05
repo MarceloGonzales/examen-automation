@@ -30,4 +30,11 @@ public class ConsultarPedidoStep {
     }
     */
 
+    public void mostrarBodyConsultarPedido(){
+        System.out.println("Impresión de los datos que se rescataron con el GET");
+        String responseBody = SerenityRest.lastResponse().asString();
+        System.out.println("Respuesta completa del servidor: ");
+        System.out.println(responseBody);
+    }
+
 }

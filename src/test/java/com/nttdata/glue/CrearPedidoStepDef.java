@@ -20,7 +20,7 @@ public class CrearPedidoStepDef {
         crearPedido.verificarCodigo(statusCode);
     }
 
-    @And("muestro los examples")
+    @And("muestro los examples de CrearPedido")
     public void mostrarBody(){
         crearPedido.mostrarBodyCrearPedidoStep();
     }
