@@ -9,14 +9,12 @@ import net.thucydides.core.annotations.Steps;
 public class CrearPedidoStepDef {
     @Steps
     CrearPedidoStep crearPedido;
-    /*
-    //@When("creo el pedido con id {int}, petId {int},quantity {int},shipDate {String},status {String},complete {int}")
-    @When("creo el pedido con id <id>, petId <petId>,quantity <quantity>,shipDate <shipDate>,status <status>,complete <complete>")
-    public void crearElPedido(int id, int petId, int quantity, String shipDate, String status, String complete){
+
+    @When("creo el pedido con id {}, petId {}, quantity {}, shipDate {string}, status {string}, complete {string}")
+    public void creoElPedidoConIdIdPetIdPetIdQuantityQuantityShipDateStatusCompleteComplete(int id, int petId, int quantity, String shipDate, String status, String complete) {
         crearPedido.crearPedido(id,petId,quantity,shipDate,status,complete);
     }
 
-    */
     @Then("el código de estado es {int}")
     public void verificarCodigoDeRespuesta(int statusCode){
         crearPedido.verificarCodigo(statusCode);
@@ -24,12 +22,9 @@ public class CrearPedidoStepDef {
 
     @And("muestro los examples")
     public void mostrarBody(){
-        crearPedido.mostrarBody();
+        crearPedido.mostrarBodyCrearPedidoStep();
     }
 
 
-    @When("creo el pedido con id {}, petId {}, quantity {}, shipDate {string}, status {string}, complete {string}")
-    public void creoElPedidoConIdIdPetIdPetIdQuantityQuantityShipDateStatusCompleteComplete(int id, int petId, int quantity, String shipDate, String status, String complete) {
-        crearPedido.crearPedido(id,petId,quantity,shipDate,status,complete);
-    }
+
 }
